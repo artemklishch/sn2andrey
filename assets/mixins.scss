@@ -1,0 +1,9 @@
+@mixin circlesformsandshadows() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: 10px 10px 20px rgba(156, 142, 255, 0.16), -10px -10px 10px $white,
+    inset -10px -10px 20px rgba(156, 142, 255, 0.16), inset 10px 10px 10px $white;
+}
