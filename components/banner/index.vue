@@ -43,7 +43,7 @@ export default {
           return;
         }
         this.text += arrayOfText.shift();
-      }, 100);
+      }, 30);
     },
   },
 };
