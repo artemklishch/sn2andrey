@@ -1,49 +1,57 @@
 <template>
   <div class="startpageblock">
-    <div class="startpageblock__topline"></div>
-    <div
-      class="startpageblock__circles circle"
-      @mouseover="(e) => hoverOnCircle(e.srcElement, 'mouseover')"
-      @mouseout="(e) => mouseOutOfCircle(e.srcElement, 'mouseout')"
-    >
-      <div class="one circle">
-        <div class="two circle">
-          <div class="three circle">
-            <Popup :text="texts[3]" />
+    <div class="d-flex justify-content-center">
+      <div class="startpageblock__circles">
+        <div class="one-circle">
+          <div class="circle-inside">
+            <span class="circle-inside-line"></span>
+            <OnePopup />
           </div>
-          <Popup :text="texts[2]" />
+          <span class="circletext">Learning System</span>
         </div>
-        <Popup :text="texts[1]" />
+
+        <div class="two-circle">
+          <div class="circle-inside">
+            <span class="circle-inside-line"></span>
+            <TwoPopup />
+          </div>
+          <span class="circletext">2DVVI</span>
+        </div>
+
+        <div class="three-circle">
+          <div class="circle-inside">
+            <span class="circle-inside-line"></span>
+            <ThreePopup />
+          </div>
+          <span class="circletext">Polimorphic</span>
+        </div>
+
+        <div class="four-circle">
+          <div class="circle-inside">
+            <span class="circle-inside-line"></span>
+            <FourPopup />
+          </div>
+          <span class="circletext">Blockchain</span>
+        </div>
       </div>
-      <Popup :text="texts[0]" />
     </div>
-    <div class="startpageblock__continuebtn">Continue</div>
   </div>
 </template>
 
 <script>
-import Popup from "./popup";
+import OnePopup from "../onepopup";
+import TwoPopup from "../twopopup";
+import ThreePopup from "../threepopup";
+import FourPopup from "../fourpopup";
 import "./styles.scss";
-import onChangePopupVis from "@/helpers/onChangePopupVis";
 
 export default {
   name: "startpage",
   components: {
-    Popup,
-  },
-  data() {
-    return {
-      texts: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, alias atquevero ex ipsam totam!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, alias atquevero ex ipsam totam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, alias atquevero ex ipsam totam!",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, alias atquevero ex ipsam totam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, alias atquevero ex ipsam totam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, alias atquevero ex ipsam totam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, alias atquevero ex ipsam totam!",
-      ],
-    };
-  },
-  methods: {
-    hoverOnCircle: onChangePopupVis,
-    mouseOutOfCircle: onChangePopupVis,
+    OnePopup,
+    TwoPopup,
+    ThreePopup,
+    FourPopup,
   },
 };
 </script>

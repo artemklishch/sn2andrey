@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("~assets/fonts/NotoSans-Regular.ttf") format("truetype");
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Noto Sans", sans-serif;
+    &__logo {
+        width: 80%;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        -webkit-box-shadow: inset 0px 1px 9px 3px rgba(156, 142, 255, 0.16);
+        box-shadow: inset 0px 1px 9px 3px rgba(156, 142, 255, 0.16);
+        margin-bottom: 40px;
+        animation: showbannertitle 3s linear 0s 1;
+        font-weight: 800;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $textmaincolor;
+    }
+    &__description {
+        width: 80%;
+        font-size: 14px;
+        color: $textmaincolor;
+        &_link {
+            color: $activetextcolor;
+            display: none;
+        }
+        &_link:hover {
+            color: $activetextcolor;
+        }
+        &_link:visited {
+            color: $activetextcolor;
+        }
+        &_link:active {
+            color: $activetextcolor;
+        }
+    }
+}
+
+@keyframes showbannertitle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

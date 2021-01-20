@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("~assets/fonts/NotoSans-Regular.ttf") format("truetype");
+}
+
+.footerblock {
+    color: $textmaincolor;
+    padding: 20px;
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    p {
+        margin: 0 10px 0 0;
+    }
+}
