@@ -1,0 +1,45 @@
+.twopopup {
+    left: 0;
+    @include popupblockmixin();
+    .data-block {
+        @include popupdatablockmixin();
+        transform: rotate(12deg);
+    }
+    &__top{
+        left: 40px;
+    }
+    &__middle {
+        top: 80px;
+    }
+    &__bottom {
+        left: 40px;
+        bottom: 0;
+    }
+    &__big.data-block {
+        width: 100px;
+        height: 100px;
+        top: 70px;
+        right: 20px;
+    }
+    .topline,
+    .middleline,
+    .bottomline {
+        display: inline-block;
+        width: 50%;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left: 25%;
+    }
+    .topline {
+        top: 30%;
+        transform: rotate(40deg);
+    }
+    .middleline{
+        top: 50%;
+    }
+    .bottomline {
+        bottom: 30%;
+        transform: rotate(-40deg);
+    }
+}
